@@ -9,11 +9,11 @@ npm i avif-wasm
 
 # usage
 ```
-import { encode, ConversionOptions, Subsampling } from 'avif-wasm'
-
-const buf = readFileSync('test.png');
+import { init, encode, ConversionOptions, Subsampling } from 'avif-wasm'
+const wasmModule = await init();
+const buffer = readFileSync('test.png');
 const options = new ConversionOptions(80, 80, Subsampling.YUV444, false)
-const data = await encode(buf, options, (p: number) => {
+const data = await encode(buffer, options, (p: number) => {
     console.log('progress', p)
 })
 const file = new File(

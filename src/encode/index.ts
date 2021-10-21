@@ -3,6 +3,7 @@ import initAvif, {
   ConversionOptions,
   ConversionResult,
 } from "./avif";
+export * from "./avif";
 let isLoad = false;
 export const init = async () => {
   if (!isLoad) {

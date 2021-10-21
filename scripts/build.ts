@@ -13,8 +13,8 @@ async function buildEncode() {
   await $`single-wasm ./pkg/ -n avif.js`;
   const avifJsPath = join(encodeRoot, "avif.js");
   const avifDTSPath = join(encodeRoot, "pkg", "conversion.d.ts");
-  const avifJsPathCopy = join(init_dir, "src", "encode", "avif.js");
-  const avifDTSPathCopy = join(init_dir, "src", "encode", "avif.d.ts");
+  const avifJsPathCopy = join(init_dir, "src", "encode", "avif", "index.js");
+  const avifDTSPathCopy = join(init_dir, "src", "encode", "avif", "index.d.ts");
   writeFileSync(avifJsPathCopy, readFileSync(avifJsPath));
   writeFileSync(avifDTSPathCopy, readFileSync(avifDTSPath));
 }

@@ -14,7 +14,7 @@
     "dev": "tsdx watch",
     "start": "tsdx watch",
     "pull": "git pull --recurse-submodules",
-    "build-lib": "node --loader ts-node/esm ./scripts/build.ts",
+    "build-lib": "npx node --loader ts-node/esm ./scripts/build.ts",
     "build": "tsdx build",
     "build-all": "npm run build-lib && tsdx build",
     "test": "tsdx test",
